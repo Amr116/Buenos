@@ -1,0 +1,14 @@
+#include "tests/lib.h"
+
+int main() {
+
+  char* buf[64];
+  int filehandler = 0;
+  int length = 32;
+  int lenRead;
+
+  lenRead = syscall_read(&buf, filehandler, length);
+  lenRead = lenRead;
+
+  return 0;
+}

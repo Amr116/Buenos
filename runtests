@@ -1,0 +1,9 @@
+cd tests/
+make
+cd ..
+rm -f fyams.harddisk
+./util/tfstool create fyams.harddisk 2048 disk
+cd tests
+../util/tfstool write ../fyams.harddisk readwrite readwrite
+cd ..
+fyams-sim buenos initprog=[disk]readwrite
